@@ -10,6 +10,19 @@ module.exports = (sequelize, Sequelize) => {
         especialidad: {
             type: Sequelize.STRING,
         },
+        telefono: {
+            type: Sequelize.INTEGER,
+            unique: true,
+        },
+        tituloAcademico: {
+            type: Sequelize.STRING,
+        },
+        fechaContratacion: {
+            type: Sequelize.DATE,
+        },
+        estado: {
+            type: Sequelize.ENUM('contratado', 'jubilado', 'suspendido'),
+        },
     })
 
     return Catedratico

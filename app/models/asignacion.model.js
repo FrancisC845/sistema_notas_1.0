@@ -8,6 +8,14 @@ module.exports = (sequelize, Sequelize) => {
             cursoId: {
                 type: Sequelize.INTEGER,
             },
+            fechaAsignacion: {
+                type: Sequelize.DATE,
+                defaultValue: Sequelize.NOW,
+            },
+            estado: {
+                type: Sequelize.BOOLEAN,
+                defaultValue: false,
+            },
         },
         {
             tableName: 'asignaciones',

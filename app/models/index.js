@@ -51,4 +51,7 @@ db.cursos.hasMany(db.asignaciones, { foreignKey: 'cursoId' })
 db.cursos.hasMany(db.grados, { foreignKey: 'cursoId' })
 db.grados.belongsTo(db.cursos, { foreignKey: 'cursoId' })
 
+db.estudiantes.hasMany(db.grados, { foreignKey: 'estudianteId' })
+db.grados.belongsTo(db.estudiantes, { foreignKey: 'estudianteId' })
+
 module.exports = db

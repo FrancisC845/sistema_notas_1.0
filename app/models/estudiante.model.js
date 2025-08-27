@@ -14,6 +14,13 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             unique: true,
         },
+        telefono: {
+            type: Sequelize.INTEGER,
+            unique: true,
+        },
+        direccion: {
+            type: Sequelize.STRING,
+        },
     })
 
     return Estudiante

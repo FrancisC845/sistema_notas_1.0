@@ -6,6 +6,12 @@ module.exports = (sequelize, Sequelize) => {
         tipoEvaluacion: {
             type: Sequelize.ENUM('parcial', 'final', 'extraordinario'),
         },
+        fecha: {
+            type: Sequelize.DATE,
+        },
+        observaciones: {
+            type: Sequelize.STRING,
+        },
     })
     return Grado
 }
