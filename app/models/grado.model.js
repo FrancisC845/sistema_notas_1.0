@@ -1,0 +1,17 @@
+module.exports = (sequelize, Sequelize) => {
+    const Grado = sequelize.define('grado', {
+        nota: {
+            type: Sequelize.FLOAT,
+        },
+        tipoEvaluacion: {
+            type: Sequelize.ENUM('parcial', 'final', 'extraordinario'),
+        },
+        fecha: {
+            type: Sequelize.DATE,
+        },
+        observaciones: {
+            type: Sequelize.STRING,
+        },
+    })
+    return Grado
+}
