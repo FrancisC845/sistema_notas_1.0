@@ -1,5 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
     const Curso = sequelize.define('curso', {
+        catedraticoId: {
+            type: Sequelize.INTEGER,
+        },
         nombre: {
             type: Sequelize.STRING,
         },
@@ -19,7 +22,7 @@ module.exports = (sequelize, Sequelize) => {
         anio: {
             type: Sequelize.INTEGER,
         },
-        horoario: {
+        horario: {
             type: Sequelize.STRING,
         },
         aula: {

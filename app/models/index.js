@@ -35,7 +35,7 @@ db.grados = require('./grado.model.js')(sequelize, Sequelize)
 db.asignaciones = require('./asignacion.model.js')(sequelize, Sequelize)
 
 // un catedrático puede tener muchos cursos
-db.catedraticos.hasMany(db.grados, { foreignKey: 'catedraticoId' })
+db.catedraticos.hasMany(db.cursos, { foreignKey: 'catedraticoId' })
 db.cursos.belongsTo(db.catedraticos, { foreignKey: 'catedraticoId' })
 
 // Una asignación pertenece a un estudiante y a un curso
@@ -46,6 +46,9 @@ db.asignaciones.belongsTo(db.cursos, { foreignKey: 'cursoId' })
 db.estudiantes.hasMany(db.asignaciones, { foreignKey: 'estudianteId' })
 // Un curso tiene muchas asignaciones
 db.cursos.hasMany(db.asignaciones, { foreignKey: 'cursoId' })
+
+db.estudiantes.hasMany(db.grados, { foreignKey: 'estudianteId' })
+db.grados.belongsTo(db.estudiantes, { foreignKey: 'estudianteId' })
 
 // Un curso tiene muchas notas (grado)
 db.cursos.hasMany(db.grados, { foreignKey: 'cursoId' })
