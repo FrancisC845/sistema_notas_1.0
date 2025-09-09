@@ -13,6 +13,8 @@ exports.create = (req, res) => {
     const asignacion = {
         estudianteId: req.body.estudianteId,
         cursoId: req.body.cursoId,
+        fechaAsignacion: req.body.fechaAsignacion,
+        estado: req.body.estado ? req.body.estado : false,
     }
 
     Asignacion.create(asignacion)

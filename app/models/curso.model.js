@@ -8,16 +8,13 @@ module.exports = (sequelize, Sequelize) => {
             unique: true,
         },
         semestre: {
-            type: Sequelize.INTEGER,
+            type: Sequelize.ENUM('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
         },
         descripcion: {
             type: Sequelize.STRING,
         },
         creditos: {
             type: Sequelize.INTEGER,
-        },
-        semetre: {
-            type: Sequelize.ENUM('I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'),
         },
         anio: {
             type: Sequelize.INTEGER,

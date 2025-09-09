@@ -14,6 +14,10 @@ exports.create = (req, res) => {
         nombre: req.body.nombre,
         email: req.body.email,
         especialidad: req.body.especialidad,
+        telefono: req.body.telefono,
+        tituloAcademico: req.body.tituloAcademico,
+        fechaContratacion: req.body.fechaContratacion,
+        estado: req.body.estado,
     }
 
     Catedratico.create(catedratico)

@@ -15,6 +15,8 @@ exports.create = (req, res) => {
         apellido: req.body.apellido,
         email: req.body.email,
         carnet: req.body.carnet,
+        telefono: req.body.telefono,
+        direccion: req.body.direccion,
     }
 
     Estudiante.create(estudiante)

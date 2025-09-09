@@ -14,6 +14,8 @@ exports.create = (req, res) => {
         cursoId: req.body.cursoId,
         nota: req.body.nota,
         tipoEvaluacion: req.body.tipoEvaluacion,
+        fecha: req.body.fecha,
+        observaciones: req.body.observaciones,
     }
 
     Grado.create(grado)
