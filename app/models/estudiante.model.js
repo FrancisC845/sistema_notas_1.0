@@ -15,7 +15,7 @@ module.exports = (sequelize, Sequelize) => {
             unique: true,
         },
         telefono: {
-            type: Sequelize.float,
+            type: Sequelize.STRING,
             unique: true,
         },
         direccion: {
